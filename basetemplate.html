@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS for the layout */
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    .parent *{
+        border-radius: 15px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    body{
+        background: linear-gradient(
+                270deg,
+                #eec0ff,
+                #fff8c0,
+                #c0f9ff,
+                #ffc0c0
+            );
+            background-size: 800% 800%;
+
+            -webkit-animation: AnimationName 30s ease infinite;
+            -moz-animation: AnimationName 30s ease infinite;
+            animation: AnimationName 30s ease infinite;
+        }
+
+        @-webkit-keyframes AnimationName {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 51%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @-moz-keyframes AnimationName {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 51%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes AnimationName {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 51%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    
+    .parent {
+      position: relative;
+      max-width: 1280px; /* Set the maximum width of the parent div */
+      margin: 0 auto; /* Center the parent div horizontally */
+      padding: 20px;
+
+      
+      -webkit-box-shadow: 1px 1px 8px -5px rgba(0,0,0,0.7);
+      -moz-box-shadow: 1px 1px 8px -5px rgba(0,0,0,0.7);
+      box-shadow: 1px 1px 8px -5px rgba(0,0,0,0.7);
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+    }
+    
+    .container {
+      display: flex;
+      padding: 15px;
+    }
+    
+    .sidebar {
+      width: 265px;
+      background-color: #f2f2f2;
+      position: sticky;
+      top: 0;
+      bottom: 0;
+      height: 500px;
+      padding: 10px;
+
+      -webkit-box-shadow: 1px 1px 8px -5px rgba(0,0,0,0.7);
+      -moz-box-shadow: 1px 1px 8px -5px rgba(0,0,0,0.7);
+      box-shadow: 1px 1px 8px -5px rgba(0,0,0,0.7);
+    }
+    
+    .sidebar-left {
+      left: 0;
+    }
+    
+    .sidebar-right {
+      right: 0;
+    }
+    
+    .content {
+      flex-grow: 1;
+      padding: 10px;
+      height: 1200px;
+      margin: 0 20px;
+
+      -webkit-box-shadow: 1px 1px 8px -5px rgba(0,0,0,0.7);
+      -moz-box-shadow: 1px 1px 8px -5px rgba(0,0,0,0.7);
+      box-shadow: 1px 1px 8px -5px rgba(0,0,0,0.7);
+    }
+    
+    /* Styling for demonstration purposes */
+    .sidebar-left {
+      background-color: #eeeeee;
+    }
+    
+    .sidebar-right {
+      background-color: #eeeeee;
+    }
+    
+    .content {
+      background-color: #eeeeee;
+    }
+    @media screen and (max-width: 1110px) {
+        .sidebar {
+          position: static;
+          display: none;
+        }  
+        .content{
+            max-width: 767px;
+            margin: 0 auto;
+        }
+        .container{
+            margin-bottom: 20px;
+        }
+}
+  </style>
+</head>
+<body style="background-color: #dddddd;">
+  <div class="parent">
+
+    <div class="container" style="height: calc(100vh - 110px); overflow-y:scroll;">
+        <!-- left -->
+      <div class="sidebar sidebar-left">
+      </div>
+      
+      <div class="content">
+        <!-- Middle container content goes here -->
+      </div>
+      
+      <div class="sidebar sidebar-right">
+        <!-- Right sidebar content goes here -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
